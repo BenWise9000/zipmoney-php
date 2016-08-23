@@ -76,13 +76,13 @@ class Checkout
     
     if(!isset($this->request->currency_code))
       $this->_errors[] = "currency_code must be provided";
-        
+
+    if(!isset($this->request->order))
+          $this->_errors[] = "order must be provided";
+
     if(!isset($this->request->order_id))
       $this->_errors[] = "order_id must be provided";
-        
-    if(!isset($this->request->order))
-      $this->_errors[] = "order->total must be provided";
-        
+
     if(!isset($this->request->order->shipping_value))
       $this->_errors[] = "order->shipping_value must be provided";
         
