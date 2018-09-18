@@ -57,7 +57,7 @@ class Quote
       $this->_errors[] = "quote_id must be provided";
         
     if(!isset($this->request->order))
-      $this->_errors[] = "order must be provided";
+      $this->_errors[] = "order->total must be provided";
         
     if(!isset($this->request->order->shipping_value))
       $this->_errors[] = "order->shipping_value must be provided";
